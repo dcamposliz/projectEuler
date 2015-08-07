@@ -4,9 +4,25 @@ What is the largest prime factor of the number 600851475143
 
 '''
 
-i = raw_input("")
-n = int(i)
-for x in range(2, n):
-	if n % x == 0:
+def is_prime(num):
+	for j in range(2,x-1):
+		if x % j == 0:
+			return False
+	return True
+
+i = raw_input("\nInput a large number >> ")
+
+j = int(i)
+
+n = int((j) / 2 + 1)
+
+print "Here is half of what your input: %d" % n
+
+print "Here are some factors of %d:" % j
+
+for x in range(n, 1, -1):
+	if j % x == 0:
+		print x
 		if is_prime(x) == True:
-			print x
+			print "This is your largest prime factor: %d" % x
+			break
