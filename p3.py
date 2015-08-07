@@ -20,7 +20,7 @@ print "Here is half of what your input: %d" % n
 
 print "Here are some factors of %d:" % j
 
-for x in range(n, 1, -1):
+for x in range(1, n):
 	if j % x == 0:
 		print x
 		if is_prime(x) == True:
